@@ -77,7 +77,8 @@ plugin :assets_manifest,
   # Default: ENV["RACK_ENV"] == "production"
   is_production: true,
 
-  # The path to your manifest.json file (remote not supported, this is loaded in the plugin boot).
+  # The path to your manifest.json file 
+  # (remote not supported, this is a local file path that is loaded in the plugin boot).
   # Only used in production to map entrypoints to their hashed filenames.
   location: "public/assets/manifest.json",
   
