@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "roda-assets_manifest"
-  spec.version = "0.1.0"
+  spec.version = "0.1.1"
   spec.authors = ["Henrique F. Teixeira"]
   spec.email = ["hriqueft@gmail.com"]
 
@@ -15,6 +15,7 @@ Gem::Specification.new do |spec|
   spec.metadata["changelog_uri"] = "https://github.com/henrique-ft/roda-assets_manifest/blob/main/CHANGELOG.md"
 
   spec.require_paths = ["lib"]
+  spec.files = Dir.glob("{lib}/**/*")
   spec.add_dependency "roda", "~> 3.0"
 
   # Uncomment to register a new dependency of your gem
