@@ -19,7 +19,7 @@ class Roda
 
     module AssetsManifest
       DEFAULT_HREF_HOST = '/public/assets'
-      DEFAULT_MANIFEST_LOCATION = '/public/assets/manifest.json'
+      DEFAULT_MANIFEST_LOCATION = 'public/assets/manifest.json'
       JS_ENTRYPOINT_TAG_CACHE = {}
       CSS_ENTRYPOINT_TAG_CACHE = {}
 
@@ -44,11 +44,12 @@ class Roda
         if opts[:manifest].respond_to?(:call)
           app.opts[:assets_manifest] = opts[:manifest].call
         else
-          location = File.expand_path((opts[:location] || DEFAULT_MANIFEST_LOCATION), __dir__)
+          location = opts[:location] || DEFAULT_MANIFEST_LOCATION
           if File.exist?(location)
             app.opts[:assets_manifest] = JSON.parse(File.read(location))
             app.opts[:assets_version] = app.opts[:assets_manifest].hash.to_s
           else
+            puts "manifest file not found in #{location}"
             app.opts[:assets_manifest] = {}
           end
         end

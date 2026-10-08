@@ -46,7 +46,7 @@ end
 ```
 
 Default host for assets is `'/public/assets'`                      
-Default manifest location is `'/public/assets/manifest.json'`
+Default manifest location is `'public/assets/manifest.json'`
 
 You can configure for your needs.
 

@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "roda-assets_manifest"
-  spec.version = "0.1.1"
+  spec.version = "0.1.2"
   spec.authors = ["Henrique F. Teixeira"]
   spec.email = ["hriqueft@gmail.com"]
 
