@@ -49,7 +49,7 @@ class Roda
             app.opts[:assets_manifest] = JSON.parse(File.read(location))
             app.opts[:assets_version] = app.opts[:assets_manifest].hash.to_s
           else
-            p "manifest file not found in #{location}"
+            puts "manifest file not found in #{location}"
             app.opts[:assets_manifest] = {}
           end
         end
